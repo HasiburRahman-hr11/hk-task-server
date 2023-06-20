@@ -6,21 +6,11 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    sectors: [
-      {
-        title: {
-          type: String,
-          required: true,
-        },
-        value: {
-          type: String,
-          required: true,
-        },
-      },
-    ],
-    acceptTerms: {
+    sectors: [String],
+    termsAccepted: {
       type: Boolean,
       required: true,
+      default: false,
     },
   },
   { timestamps: true }
