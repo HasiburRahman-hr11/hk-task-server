@@ -22,7 +22,7 @@ app.use(userRoute);
 const PORT = process.env.PORT || 8000;
 mongoose
   .connect(
-    `mongodb+srv://hrhasib:hrhasib11@cluster0.ow4dmpf.mongodb.net/hk-task`)
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_CLUSTER}.ow4dmpf.mongodb.net/hk-task`)
   .then(() => {
     console.log('Database Connected.')
     app.listen(PORT, () => {
